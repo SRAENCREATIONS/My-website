@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VoyagersPlan - 3D Travel Environment</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- 3D Canvas Container -->
+    <div id="canvas-container"></div>
+
+    <!-- UI Overlay -->
+    <div id="ui-layer">
+      <!-- Top Header -->
+      <header class="glass-panel header">
+        <div class="logo">VoyagersPlan</div>
+        <nav>
+          <button class="active">Explore</button>
+          <button>Planner</button>
+          <button>Network</button>
+        </nav>
+        <div class="user-profile">
+          <img src="https://i.pravatar.cc/100?img=3" alt="Profile" />
+        </div>
+      </header>
+
+      <!-- Left Sidebar: Planner Input -->
+      <aside class="glass-panel sidebar-left">
+        <h2>Where to next?</h2>
+        <p class="subtitle">Our AI synthesizes the world's knowledge to craft your perfect itinerary.</p>
+        
+        <div class="search-box">
+          <input type="text" placeholder="Plan a 4-day Goa trip with a mix of beach heritage and night markets..." />
+        </div>
+        
+        <div class="filters">
+          <span class="chip">📅 4 Days</span>
+          <span class="chip">💰 Premium Budget</span>
+        </div>
+        
+        <button id="btn-animate-route" class="primary-btn">Craft Journey ✨</button>
+
+        <div class="recent-trips">
+          <h3>Recent Trips</h3>
+          <div class="trip-card">
+            <div class="trip-info">
+              <h4>Kyoto Serenity</h4>
+              <p>Traditional architecture</p>
+            </div>
+          </div>
+          <div class="trip-card">
+            <div class="trip-info">
+              <h4>Patagonia Trails</h4>
+              <p>Glaciers and mountains</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Right Floating Panel: Weather & Details -->
+      <div class="glass-panel floating-right">
+        <div class="weather-widget">
+          <div class="weather-info">
+            <span class="temp">18°C</span>
+            <span class="condition">Partly Cloudy</span>
+          </div>
+          <p>Perfect conditions for travel</p>
+        </div>
+        
+        <div class="itinerary-timeline">
+          <h3>Itinerary Timeline</h3>
+          <div class="timeline-item">
+            <div class="dot"></div>
+            <div class="time">Day 1 • 10:45 AM</div>
+            <h4>Arrival at Dabolim Airport</h4>
+            <p>Driver will be waiting at Gate 2.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="dot"></div>
+            <div class="time">Day 1 • 12:30 PM</div>
+            <h4>Check-in at Taj Exotica</h4>
+            <p>Sea view room guaranteed.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Bottom Interaction Bar -->
+      <div class="glass-panel bottom-bar">
+        <button class="icon-btn active">🌐 Map</button>
+        <button class="icon-btn">🗓️ Itinerary</button>
+        <button class="icon-btn">💰 Budget</button>
+        <button class="icon-btn">⚙️ Settings</button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
