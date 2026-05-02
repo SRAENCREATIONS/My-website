@@ -12,6 +12,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700&display=swap"
     rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -28,8 +29,14 @@
         <button>Planner</button>
         <button>Network</button>
       </nav>
-      <div class="user-profile">
-        <img src="https://i.pravatar.cc/100?img=3" alt="Profile" />
+      <div class="header-right">
+        <div class="collab-avatars">
+          <img src="https://i.pravatar.cc/100?img=1" class="avatar avatar-1" />
+          <img src="https://i.pravatar.cc/100?img=5" class="avatar avatar-2" />
+        </div>
+        <div class="user-profile">
+          <img src="https://i.pravatar.cc/100?img=3" alt="Profile" />
+        </div>
       </div>
     </header>
 
@@ -90,6 +97,29 @@
           <h4>Check-in at Taj Exotica</h4>
           <p>Sea view room guaranteed.</p>
         </div>
+      </div>
+
+      <div class="transport-suggestions">
+        <h3>Live Transport Routes</h3>
+        <div class="transport-card">
+          <span class="icon">✈️</span>
+          <div class="details">
+            <h4>Flight AI-302</h4>
+            <p>Boarding in 45m</p>
+          </div>
+          <span class="status pulse-green">On Time</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Budget Panel -->
+    <div class="glass-panel budget-panel">
+      <div class="budget-header">
+        <h3>Trip Budget</h3>
+        <span class="total">₹ 18,500</span>
+      </div>
+      <div class="chart-container">
+        <canvas id="budgetChart"></canvas>
       </div>
     </div>
 
